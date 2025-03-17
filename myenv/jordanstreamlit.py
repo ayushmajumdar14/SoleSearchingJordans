@@ -13,7 +13,7 @@ import random
 @st.cache_data
 def load_data():
     # Load your pre-scraped CSV file ("final_jordan_data.csv")
-    df = pd.read_csv("final_jordan_data.csv")
+    df = pd.read_csv("myenv/final_jordan_data.csv")
     
     # Attempt to parse the sell_date column (expected format "Apr 10, 2023")
     df["sell_date"] = df["sell_date"].fillna("").astype(str).str.strip()
